@@ -1,0 +1,13 @@
+<div><%=@conversation.subject%></div>
+
+<%@conversation.receipts_for(Player.find(session[:player_id])).each do |receipt|%>
+  <div><%=receipt.message.sender.name%> :</div>
+  <div><%=receipt.message.body%></div>
+<% end %>
+
+<%= form_tag conversation_messages_path(@conversation), method: :post do%>
+<div>
+<%=text_area_tag :body%>
+</div>
+<%= submit_tag %>
+<%end%>

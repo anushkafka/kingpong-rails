@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'httparty'
+gem 'mailboxer'
 # Round Robin Tournament scheduling
 gem 'round_robin_tournament'
 # The Elo rating system is a method for calculating the relative skill levels of players in two-player games
